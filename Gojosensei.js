@@ -1146,7 +1146,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                 }
             }
             break
-            case 'زوجني': {
+            case 'توأمي': {
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let me = m.sender
@@ -1162,7 +1162,7 @@ Please @${m.mentionedJid[0].split`@`[0]} To Type Accept/Reject`
                     await GojoMdNx.sendButtonText(m.chat, buttons, jawab, GojoMdNx.user.name, m, {mentions: ments})
             }
             break
-            case 'زواج': {
+            case 'زوجني': {
             if (!m.isGroup) return replay(`${mess.group}`)
             let member = participants.map(u => u.id)
             let orang = member[Math.floor(Math.random() * member.length)]
@@ -1757,7 +1757,7 @@ break
                             }, {
                                 quickReplyButton: {
                                     displayText: '「 القائمة 」「🗒️」◣',
-                                    id: 'اوامر'
+                                    id: 'menu'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2066,7 +2066,7 @@ break
                 })
                 }
                 break
-        case 'image': case 'صورة': {
+        case 'image': case '.img': {
         if (!text) return reply(`Example : ${prefix + command} gojo`)
         let gis = require('g-i-s')
         gis(text, async (error, result) => {
@@ -2086,7 +2086,7 @@ break
         })
         }
         break
-	    case 'play': case 'فيديو': case 'ytplay': {
+	    case 'play': case '.vid': case 'ytplay': {
                 if (!text) return reply(`Example : ${prefix + command} غوجو ساتورو`)
                 let yts = require("yt-search")
                 let search = await yts(text)
