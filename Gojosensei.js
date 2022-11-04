@@ -2066,7 +2066,7 @@ break
                 })
                 }
                 break
-        case 'image': case 'صورة': {
+        case 'img': case 'صورة': {
         if (!text) return reply(`Example : ${prefix + command} gojo`)
         let gis = require('g-i-s')
         gis(text, async (error, result) => {
